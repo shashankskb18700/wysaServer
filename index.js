@@ -29,7 +29,7 @@ authRoutes(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://crown-db-50da8.web.app/",
+    origin: "*",
     method: ["GET", "POST"],
   },
 });
