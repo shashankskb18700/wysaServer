@@ -20,7 +20,6 @@ module.exports = (app) => {
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.redirect("https://crown-db-50da8.web.app/auth");
-    res.send(req.user);
   });
 
   app.get("/api/current_user", (req, res) => {
