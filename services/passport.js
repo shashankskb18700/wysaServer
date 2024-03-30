@@ -19,7 +19,7 @@ module.exports = passport.use(
       clientID: keys.googleClientId,
       clientSecret: keys.googleClientSecret,
 
-      callbackURL: "http://localhost:5000/auth/google/callback",
+      callbackURL: "https://wysaserver.onrender.com/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({
