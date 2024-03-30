@@ -10,7 +10,7 @@ module.exports = (app) => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      res.redirect("http://localhost:3000/home");
+      res.redirect("https://crown-db-50da8.web.app/");
 
       io.emmit("Heloo");
       io.emmit("welcome to wysa");
@@ -20,7 +20,7 @@ module.exports = (app) => {
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.send(req.user);
-    res.redirect("http://localhost:3000/auth/google");
+    res.redirect("https://crown-db-50da8.web.app/auth");
   });
 
   app.get("/api/current_user", (req, res) => {
